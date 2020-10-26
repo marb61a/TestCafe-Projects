@@ -1,0 +1,19 @@
+TestCafe
+    - https://www.devexpress.com/products/testcafestudio/ (not open source)
+    - TestCafe is a free and opensource NodeJS tool to automate e2e testing
+        - It runs on Windows, macOS and Linux
+    - It supports desktop, mobile, remote and cloud browsers
+        - These can also be headless
+        - Tests can also be ran in Javascript or Typescript
+    - It is an alternative to other testing and automation solutions
+    - It is easy to install with one command
+    - It is a unique technology
+        - It does not control the browser like Puppeteer/Webdriver
+        - It is not a browser itself unlike cypress
+    - The core is a proxy server which tansforms JS/HTML code to include automation code
+    - There are several reasons to use TestCafe
+        - Not having to worry about waiting for an element to load
+        - Parallel testing in multiple browsers is simple
+        - Supports BDD, data driven testing and Page Object Model
+        - It is compatible with CI tools
+    -
