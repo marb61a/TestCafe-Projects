@@ -21,7 +21,34 @@ End to End testing
     - This is also known as E2E testing
     - This is a technique to test whether an application flows from start to finish behaves as expected
     - These tests simulate real world user scenarios essentially testing an app how a real user would use the application
-    - 
+    - The purpose of performing E2E tests is to identify dependencies and to ensure data integrity is maintained between systems
+    - The benefits of E2E testing are
+        - Verification that the entire system is working properly
+        - Prevention of bugs or regression issues
+    - There are a few different components of TestCafe
+        - Client-server
+            - There is no external driver needed in TestCafe
+            - This allows for cross browser and multi-platform testing
+            - TestCafe uses a url rewriting proxy instead of WebDriver
+            - This injects the driver script that emulates user actions into a test page
+            - TestCafe uses 10.0.75.1 when testing
+            - There are reasons for using a server in TestCafe
+                - A database or web service can be launched from the tests
+                - Access can be gotten to the server file system to read data samples or check uploads
+                - Tests can make use of all Node.js features and external modules
+                - Tests became faster and more stable as test logic is now separated from the automation scripts
+                - Test code can't interrupt the page execution, because TestCafe doesn't inject user-written code
+                - The latest syntax features like async/await are supported also with TestCafe
+        - TestCafe API
+            - Test code uses TestCafe API methods to interact with the tested page
+            - There are 3 main types of interaction
+                - Select Elements
+                - Perform actions
+                - Execute assertions
+            -
+        - Page Proxying
+        - Isolated Tests
+    -
 
 Install TestCafe
     - Needs to have NodeJS installed
