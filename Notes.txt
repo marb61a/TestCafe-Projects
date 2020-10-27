@@ -45,10 +45,18 @@ End to End testing
                 - Select Elements
                 - Perform actions
                 - Execute assertions
-            -
         - Page Proxying
         - Isolated Tests
-    -
+            - TestCafe isolates each test run from subsequent tests and tests that run in parallel.
+            - After a test is completed, TestCafe resets the browser state by
+                - Deleting cookies
+                - Clearing both local and session storage
+                - Reloading the test page
+    - TestCafe Studio vs Open-source TestCafe
+        - TestCafe Studio is a cross-platform IDE for end-to-end testing or end-to-end web testing
+        - It is also multi platform and works in every browser including mobile
+        - It has a lot of features such as
+            - Visual test recorder, Cross-browser testing and Comprehensive reports with powerful code editor
 
 Install TestCafe
     - Needs to have NodeJS installed
@@ -64,4 +72,19 @@ TestCafe Example
     - It is important for testers to understand async\await in Javascript
         - https://www.freecodecamp.org/news/async-await-javascript-tutorial/
     - Async\Await is used by TestCafe in all cases
+    - TestCafe tests must be organised into categories that are called fixtures
+        - A JS/TS file with TestCafe tests can contain 1 or more fixtures
+        - To declare a fixture simply use the fixture function
+            - fixture 'Authentication Tests' .page 'url'
+        - To create a test call the test function a pass a function which contains the test code
+            - The test code function accepts the test controller objectas a parameter
+                  fixture 'MyFixture';
+                  test('Test1', async t => {
+                    // Test 1 Code
+                })
+                  test('Test2', async t => {
+                    // Test 2 Code
+                })
+            - 
     - 
+    -
