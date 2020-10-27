@@ -86,5 +86,18 @@ TestCafe Example
                     // Test 2 Code
                 })
             - 
-    - 
-    -
+    - Test controller 
+        - A  test controller exposes the test API's methods and passing to each function that can run server-side test code.
+        - Some examples of functions are  test, beforeEach or afterEach.
+        - A test controller can be used to 
+            - Call test actions
+            - Handle browser dialogs
+            - Use the wait functions
+            - Execute assertions
+        - The test runner also uses a test controller to access the internal context required for the test API to operate.
+
+First Test
+    - Added tests folder and firstTest.js
+    - Need to prefix testcafe command with npx to run on Windows
+    - This maybe because local installs are not added to the path
+    
