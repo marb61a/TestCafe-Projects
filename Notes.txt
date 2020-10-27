@@ -16,4 +16,25 @@ TestCafe
         - Parallel testing in multiple browsers is simple
         - Supports BDD, data driven testing and Page Object Model
         - It is compatible with CI tools
-    -
+
+End to End testing
+    - This is also known as E2E testing
+    - This is a technique to test whether an application flows from start to finish behaves as expected
+    - These tests simulate real world user scenarios essentially testing an app how a real user would use the application
+    - 
+
+Install TestCafe
+    - Needs to have NodeJS installed
+    - VS is used but can be any text editor
+    - To check npm version for installing packages
+        - Enter the following command npm -v
+    - Install the testcafe extensions available on the VSCode marketplace
+    - Install the testcafe npm packages
+
+TestCafe Example
+    - Initial test examples will use the TestCafe demo site
+    - This will be replaced by a more real world example later
+    - It is important for testers to understand async\await in Javascript
+        - https://www.freecodecamp.org/news/async-await-javascript-tutorial/
+    - Async\Await is used by TestCafe in all cases
+    - 
