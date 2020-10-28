@@ -100,4 +100,18 @@ First Test
     - Added tests folder and firstTest.js
     - Need to prefix testcafe command with npx to run on Windows
     - This maybe because local installs are not added to the path
-    
+
+Using Selectors with Elements
+    - The Selector API provides methods and properties to select elements on the page and get their state
+    - TestCafe uses standard CSS selectors to locate elements
+    - This is similar to using document.querySelector in JavaScript or FindElementBy.CSSSelector in Selenium Webdriver
+    - In a test  before the fixture there is a need to import the selector from TestCafe
+        - This is done using the import keyword
+        - This will remove hardcoded selectors in the test script
+        - An array can be used if there is a need to import different names.
+    - Before the selector and after the import there can be constants added for the various selecor elements needed
+        - These will replace the presently hardcoded values
+
+Specify the Start Webpage
+    - The URL is being passed with the fixture but can also be added with the test
+    - 
