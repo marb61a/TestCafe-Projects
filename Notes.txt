@@ -114,4 +114,18 @@ Using Selectors with Elements
 
 Specify the Start Webpage
     - The URL is being passed with the fixture but can also be added with the test
-    - 
+        - The test url can differ from the fixture url
+        - The fixture url can be set to something like a base page or base url 
+        - This is similar to multiple other frameworks
+    - The test url will be ran when specified ahead of the fixture url
+        - This overrides the fixture specified url
+
+Fixture and Test Metadata
+    - TestCafe allows you to specify additional information for tests in the form of key-value metadata
+    - You can display this information in the reports and use them to filter tests
+        - One example is a command which runs tests whose metadata's device property is set to mobile, and env property is set to production
+            - npx testcafe chrome my-tests --test-meta device=mobile,env=production
+        - Again the npx is needed to run the tests on some Windows machines
+    - Metadata can also  be defined for tests and fixtures
+        - This uses fixture.meta and test.meta
+    -
