@@ -128,4 +128,16 @@ Fixture and Test Metadata
         - Again the npx is needed to run the tests on some Windows machines
     - Metadata can also  be defined for tests and fixtures
         - This uses fixture.meta and test.meta
+    - To run a test file with specific environment such as production
+        -  npx testcafe chrome .\tests\testMetaScript.js --test-meta env=production
+        - Running the tests with the additional options will run both tests in the file rather than 1 which matches metadata
+
+Interact with Page Elements
+    - Navigate
+        - TestCafe provides a set of actions that you can use to interact with the page including
+            - Click, Navigate, Hover, Drag, Type text and more
+        - This will navigate to the URL specified in the test fixture and then to the navigateTo URL
+    - IFrame
+        - This uses the IFrame test example found at -> http://the-internet.herokuapp.com/iframe
+        - 
     -
