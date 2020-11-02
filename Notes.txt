@@ -139,5 +139,11 @@ Interact with Page Elements
         - This will navigate to the URL specified in the test fixture and then to the navigateTo URL
     - IFrame
         - This uses the IFrame test example found at -> http://the-internet.herokuapp.com/iframe
+        - switchToIframe() switches the test's browsing context to the specified iFrame
+        - switchToMainWindow() switches back to the main window from the IFrame
+    - Dropdownlist & Upload file
+        - How to select an option inside the drop-down list
+        - There are usually 2 things to do in TestCafe with dropdown lists
+            - Get the dropdown list to drop and then select an option
         - 
     -
