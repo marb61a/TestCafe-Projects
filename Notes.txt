@@ -145,5 +145,20 @@ Interact with Page Elements
         - How to select an option inside the drop-down list
         - There are usually 2 things to do in TestCafe with dropdown lists
             - Get the dropdown list to drop and then select an option
+        - Again using the internet.herokuapp.com site for uploading an image
+            - https://the-internet.herokuapp.com/upload
+        - Uploading a file in TestCafe is done using setFilesToUpload() function
+            - This needs to have a path to the file(s) to be uploaded
+            - setFilesToUpload() with TestCafe automatically waits until the file is uploaded to the server
+            - This means that there are no additional commands or libraries needed
+            - Uploads can also be cleared with one function -> clearUpload()
+                - This removes all the file paths from the specific file upload input
+    - Set Test Speed
+        - Tests can be ran very quickly which may not give time to see what is occurring
+        - This is why there is a need to be able to reduce test speed
+        - This makes use of the setTestSpeed method
+    - Set Page Timeout
+        -
+    - Drag & Hover
         - 
     -
