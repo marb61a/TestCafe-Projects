@@ -158,7 +158,10 @@ Interact with Page Elements
         - This is why there is a need to be able to reduce test speed
         - This makes use of the setTestSpeed method
     - Set Page Timeout
-        -
+        - setPageLoadTimeout() specifies the amount of time within which TestCafe waits for the window.load event to fire before starting the test
     - Drag & Hover
-        - 
+        - drag an element to a specific offset using TestCafe
+        - Example is a slider and it will be able to be dragged to a specific offset
+        - This makes use of the drag() command from TestCafe
+        - drag uses different offsets of X and Y of the mouse pointer
     -
