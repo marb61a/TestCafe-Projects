@@ -19,5 +19,14 @@ test
     .typeText(developerName, "Martin")
     .click(osOption)
     .click(submitButton);
-    
+
+});
+
+test.page("https://devexpress.github.io/testcafe/example/")
+("Second Test", async t => {
+    await t
+        .typeText("#developer-name", "Martin")
+        .click("#windows")
+        .click("#submit-button")
+
 });

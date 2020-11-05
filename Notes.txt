@@ -173,5 +173,12 @@ Interact with Page Elements
         - If a test runs in several browsers then the test hooks are executed in each browser
         - A hook can be specified for each test in a fixture with the fixture.beforeEach or fixture.afterEach methods
         - 
-    -
 
+Assertions
+    - TestCafe provides a comprehensive set of assertions
+    - These are based on a behavior-driven development style or BDD style
+    - In order to construct assertions the expected method of the test controller is used
+    - In assertions the check is that the actual results are equal to the expected one
+    - The equal() function is used
+        - This takes the parameters expected, message, and options if we wanted to add anything else
+        - The assertion query timeout can be specified in test code, with the options.timeout option.
