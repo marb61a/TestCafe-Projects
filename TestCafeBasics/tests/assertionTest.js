@@ -9,5 +9,11 @@ fixture("First Fixture")
     .page("https://devexpress.github.io/testcafe/example/");
 
 test("First Test", async t => {
+    await t
+        .expect(developerName.value).eql('', 'input is empty')
+        .typeText(developerName, 'Martin')
+        .expect(developerName.value).eql('Martin','input contains "Martin"')
+        .click(osOption)
+        .click(submitButton);
 
 });
