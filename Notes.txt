@@ -214,4 +214,25 @@ Test execution
         - testcafe firefox,chrome,safari tests/firstTest.js
 
 Run Tests in Parallel
+    - TestCafe allows for executing tests concurrently
+    - In concurrent mode, TestCafe invokes multiple instances of each browser
+        - These instances constitute the pool of browsers against which tests run concurrently
+        - For example, each test runs in the first available instance
+    - To enable using concurrency use -c or --concurrency at the command line
+        - npx testcafe -c 5 chrome .\tests\testOnlyTest.js
+        - This invokes 5 instances of Chrome and runs the tests concurrently
+    - TestCafe concurrenncy means running or splitting the test with different concurrency
+        - This is not repeating the test with the same or with each instance
+    - Concurrency can also be used with testing against multiple browsers
+        - npx testcafe -c 5 chrome,firefox .\tests\testOnlyTest.js
+    - Live Mode
+        - Live mode ensures TestCafe and the browsers remain active while working on tests
+    - Use -L or --live flag to enable live mode from the command line interface
+        - npx testcafe chrome .\tests\testOnlyTest.js -L
+    - After entering the test to be ran in live mode there are some commands available
+        - Ctrl+S to stop the test run
+        - Ctrl+R to restart the test run
+        - Ctrl+W to enable or disable watching files
+        - Ctrl+C to quit the live mode and close the browsers
+    - With live mode, changes can be made to anything in the script, and after that, the test will run again automatically and take the change
     - 
