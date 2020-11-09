@@ -172,7 +172,6 @@ Interact with Page Elements
         - Test hooks override fixture hooks
         - If a test runs in several browsers then the test hooks are executed in each browser
         - A hook can be specified for each test in a fixture with the fixture.beforeEach or fixture.afterEach methods
-        - 
 
 Assertions
     - TestCafe provides a comprehensive set of assertions
@@ -195,3 +194,24 @@ Skip Test
     - Use the fixture.skip and test.skip methods for this
     - Also use fixture.only and test.only methods to specify that only a particular test or fixture should run while all the others should be skipped
     
+Working with client-side information
+    - TestCafe allows for creating client functions that can return any serializable value from the client-side
+        - This can be a current URL or custom data calculated by a client script
+    - TestCafe has ClientFunction which needs to be imported like Selector
+    - Using ClientFunction it is necessary to get window.location.href
+        - This will always contains the current URL from the browser
+
+Test execution
+    - TestCafe is designed to support most modern browsers
+    - TestCafe automatically detects the popular browsers installed on a local computer
+        - It is actively tested with 
+            - Chrome with different versions, IE 11 +, Edge (legacy\chromium based), Safari, Firefox, Mobile (Saferi\Chrome)
+    - To see which browsers are supported
+        - testcafe --list-browsers
+    - To run tests on all the local browsers using the following command
+        - testcafe all tests
+    - To run test on multiple browsers together
+        - testcafe firefox,chrome,safari tests/firstTest.js
+
+Run Tests in Parallel
+    - 
