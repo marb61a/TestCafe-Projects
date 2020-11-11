@@ -256,4 +256,22 @@ Headless Mode
         - testcafe chrome:headless tests/firstTest.js
         - testcafe firefox:headless tests/firstTest.js
     - Headless is not available with Safari
+
+Deep Dive With TestCafe
+Wait Mechanisms
+    - There are different mechanisms with TestCafe for the wait, for actions, or with selectors or assertions
+    - TestCafe has a built-in automatic waiting mechanism
+        - There is no  requirement for a dedicated API to wait for redirects or page elements to appear
+        - These mechanisms work when TestCafe performs test actions, evaluates assertions and selectors, sends requests, and navigates the browser
+    - Wait Mechanisms for actions
+        - TestCafe automatically waits for the target element to become visible when an action is executed
+        - TestCafe tries to evaluate the specific selector multiple times within the timeout
+        - If the element does not appear the test will fail
+        - The timeout option to specify the selector timeout in the test code
+            - This can be done 2 ways
+                - Pass the timeout to the runner.run API method or add it on the cli
+    - Wait Mechanism for Selectors
+        - Using a Selector TestCafe will automatically wait for an element to appear in the DOM
+        - There is also a way to  require that TestCafe should wait for an element to become visible
+            - This uses the the visibilityCheck selector option 
     -
