@@ -284,6 +284,7 @@ Debugging
     - There are different ways to debug our test cases with TestCafe
     - The first method is to use Debug Mode
         - Add --debug on the command line
+            - A debug can also be added in a test using debug()
         - After this is added the test being ran is started in debug mode
         - This allows for checking step by step on what occurred during the test
         - In this mode, test execution is paused before the first action or assertion
@@ -291,9 +292,22 @@ Debugging
         - When the test execution reaches t.debug that was already added in a test
             - The test pauses to allow opening browser developer tools
             - This will allow for checking page state, DOM elements, location, their CSS, and more
+            - In the broswer window the footer displays a status report in which test execution can be resumed or skipped to the next action
+        - Debug Mode on Fail
+            - This is where a test is setup to automatically enter debug mode on failure
+            - It is done using the command line parameter --debug-on-fail
+            - npx testcafe chrome .\tests\testOnlyTest.js --debug-on-fail
+        - Use the Unlock page switch in the footer to unlock the tested page and interact with its elements
     - Taking Screenshots
         - This can be done on failure or during tests
         - A screenshot can be either the entire page or with an element
     - An additional feature is the ability to record videos
         - Again this is done in TestCafe natively without a need to use an external API
+
+Take Screenshots
+    - There are some prerequisites for Screenshots
+        - TestCafe allows for taking screenshots on the tested webpage at any moment during a test run or automatically whenever a test fails
+        - Screenshots required .NET 4.0 or newer install on Windows machines
+        - Use t.takeScreenshot to take a screenshot of the entire page, or t.takeElementScreenshot action to capture a particular element.
+        - Screenshots are not supported when you run tests in remote browsers
     -
