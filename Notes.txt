@@ -274,4 +274,26 @@ Wait Mechanisms
         - Using a Selector TestCafe will automatically wait for an element to appear in the DOM
         - There is also a way to  require that TestCafe should wait for an element to become visible
             - This uses the the visibilityCheck selector option 
+    - Wait Mechanism for Assertions
+        - TestCafe assertions use a Smart Assertion Query mechanism
+        - This is activated when elector property or a client function as an actual value is passed
+        - When an action triggers a redirect, TestCafe automatically waits for the server to respond
+        - The test continues if the server doesn't respond within 15 seconds
+
+Debugging
+    - There are different ways to debug our test cases with TestCafe
+    - The first method is to use Debug Mode
+        - Add --debug on the command line
+        - After this is added the test being ran is started in debug mode
+        - This allows for checking step by step on what occurred during the test
+        - In this mode, test execution is paused before the first action or assertion
+            - This is to allow invoking the developer tools and the debug
+        - When the test execution reaches t.debug that was already added in a test
+            - The test pauses to allow opening browser developer tools
+            - This will allow for checking page state, DOM elements, location, their CSS, and more
+    - Taking Screenshots
+        - This can be done on failure or during tests
+        - A screenshot can be either the entire page or with an element
+    - An additional feature is the ability to record videos
+        - Again this is done in TestCafe natively without a need to use an external API
     -
