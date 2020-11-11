@@ -235,4 +235,25 @@ Run Tests in Parallel
         - Ctrl+W to enable or disable watching files
         - Ctrl+C to quit the live mode and close the browsers
     - With live mode, changes can be made to anything in the script, and after that, the test will run again automatically and take the change
-    - 
+    - Concurrent test execution is not supported in Microsoft Edge
+
+Filter Tests By Metadata & Name
+    - Tests and fixtures can be filtered by metadata
+        - testcafe chrome ./tests/ --fixture-meta device=mobile,env=production
+            - To filter fixtures with specific data, use the --fixture-meta argument
+        - testcafe chrome tests/testMetaScript.js --test-meta env=production
+            - runs the specified test 
+    - Tests and fixtures can also be ran by name
+        - testcafe safari ./tests/HooksTest.js -t "First Test"
+        - The t option is added to add a test by name which is specified in a string at the end of the command
+        - This can also be done in the runner.filter method
+
+Headless Mode
+    - Headless mode can be very useful when running CI servers
+    - This consumes less resources as there is no GUI
+    - Use the :headless parameter to launch a browser in headless mode.
+    - This can be ran with either firefox or chrome
+        - testcafe chrome:headless tests/firstTest.js
+        - testcafe firefox:headless tests/firstTest.js
+    - Headless is not available with Safari
+    -
