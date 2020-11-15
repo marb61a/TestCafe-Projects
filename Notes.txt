@@ -310,4 +310,19 @@ Take Screenshots
         - Screenshots required .NET 4.0 or newer install on Windows machines
         - Use t.takeScreenshot to take a screenshot of the entire page, or t.takeElementScreenshot action to capture a particular element.
         - Screenshots are not supported when you run tests in remote browsers
+        - Using -s can be a shortcut for screenshot
+
+Video Recording with TestCafe
+    - TestCafe allows you to record the videos of test runs, but we should install the FFmpeg library to record the videos
+    - If FFmpeg is not installed it can be using npm 
+        - npm install --save @ffmpeg-installer/ffmpeg
+    - The videos that are generated are then saved in MP4 format
+    - To enable the video recording add --video to the cli command of the test run
+        - To keep videos together setup a videos folder and an artifacts folder to hold all test related artifacts
+    - Video will not run in VS code but folder can be opened and video should run
+    - To run only when tests are failing use the following options 
+        - npx testcafe chrome .\tests\elementScreenshotDemo.js --video artifacts/videos --video-options failedOnly=true
+    - There are a few options that TestCafe supports for videos
+        - failedOnly -- When true records failed tests only
+        - singleFile -- When set to true saves recordings as a single file
     -
