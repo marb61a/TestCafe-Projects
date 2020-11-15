@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "ffmpeg": "0.0.4",
     "testcafe": "^1.9.4"
   }
 }
