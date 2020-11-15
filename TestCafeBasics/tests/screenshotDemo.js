@@ -14,19 +14,30 @@ fixture("First Fixture")
 
 test
     .page("https://devexpress.github.io/testcafe/example/")
-("First Test", async t => {
-    await t 
-    .typeText(developerName, "Martin")
-    .click(osOption)
-    .click(submitButton);
-
-});
-
-test.page("https://devexpress.github.io/testcafe/example/")
-("Second Test", async t => {
-    await t
-        .typeText("#developer-name", "Martin")
-        .click("#windows")
-        .click("#submit-button")
-
-});
+    ("First Test", async t =>{
+        await t
+            .typeText("#developer-name","Martin")
+            .click("#macos")
+            .click("#submit-button")
+            .takeScreenshot();
+    });
+    
+test
+    .page("https://devexpress.github.io/testcafe/example/")
+    ("Second Test", async t =>{
+        await t
+            .typeText("#developer-name","Martin")
+            .click("#macos")
+            .takeScreenshot()
+            .click("#submit-button");
+    });
+    
+test
+    .page("https://devexpress.github.io/testcafe/example/")
+    ("Third Test", async t =>{
+        await t
+            .typeText("#developer-name","Martin")
+            .click("#macos")
+            .click("#submit-button")
+            .takeScreenshot();
+    });
