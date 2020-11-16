@@ -276,7 +276,7 @@ Wait Mechanisms
             - This uses the the visibilityCheck selector option 
     - Wait Mechanism for Assertions
         - TestCafe assertions use a Smart Assertion Query mechanism
-        - This is activated when elector property or a client function as an actual value is passed
+        - This is activated when a selector property or a client function as an actual value is passed
         - When an action triggers a redirect, TestCafe automatically waits for the server to respond
         - The test continues if the server doesn't respond within 15 seconds
 
@@ -325,4 +325,22 @@ Video Recording with TestCafe
     - There are a few options that TestCafe supports for videos
         - failedOnly -- When true records failed tests only
         - singleFile -- When set to true saves recordings as a single file
-    -
+
+Visual Studio Code Extensions
+    - Testlatte is already installed
+    - There are code snippets available having installed the extensions
+    - There are multiple different options available for the different code blocks
+    - Tests folder will need to be renamed to test to use the test runner
+
+Pages
+Page Model
+    - Page Model is a test automation pattern that allows you to create an abstraction of the test pages
+        - This allows is to be used in the test code to refer to the page element
+    - Why use the Page Object Model or Page Model
+        - There are several problems which using the Page Object Model solves
+            - Changes in locator names will need to be adjusted in multiple file as there is no shared file
+            - Code duplication coming from repetition
+            - Difficulty in maintaining due to large amounts of unnecessary files 
+
+Home Page Class
+    - 
