@@ -41,4 +41,4 @@ class RegisterPage {
 
 }
 
-export default RegisterPage;
+export default new RegisterPage();
