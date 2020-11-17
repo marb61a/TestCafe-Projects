@@ -17,11 +17,17 @@ class HomePage{
         return Selector("input[id='small-searchterms']");
     }
 
-    async search(){
+    async search(product){
         await t
             .typeText(this.productSearch, product)
             .wait(3000)
             .pressKey('enter');
+    }
+
+    async changeCurrency(currency){
+        await t
+            .click(currencyList)
+            .click(Selector('option', { text: currency }));
     }
 
 }
