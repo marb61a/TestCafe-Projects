@@ -3,7 +3,7 @@ import { Selector,t } from 'testcafe';
 class HomePage{
     constructor(){
         this.subtitleHeader = Selector('h2')
-            .withText('Welcome to the store');
+            .withText('Welcome to our store');
         this.RegisterLink = Selector('a').withText('Register');
         this.LoginLink = Selector('a').withText('Log in');
         this.CartLink = Selector('a').withText('Shopping cart');
