@@ -49,7 +49,7 @@ test("Place order E2E test", async t => {
         .click(homepage.CartLink)
         .click(cartpage.termsLabel)
         .click(cartpage.checkoutBtn)
-        .expect(getURL).contains("checkout");
+        .expect(getURL()).contains("checkout");
     
     await checkoutpage.selectCountry('Ireland');
     await t
