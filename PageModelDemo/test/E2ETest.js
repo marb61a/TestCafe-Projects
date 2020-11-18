@@ -35,5 +35,29 @@ test("Place order E2E test", async t => {
         .typeText(registerpage.ConfirmPassword, 'ABC123')
         .click(registerpage.RegisterButton)
         .expect(registerpage.SuccessfullMessage.exists).ok();
+    
+    await homepage.search("Apple MacBook Pro 13-inch");
+    await t
+        .click(searchresults.productTitle)
+        .expect(getURL()).contains("apple-macbook-pro-13-inch")
+        .expect(productdetails.productPrice.exists).ok()
+        .selectText(productdetails.productQuantity).pressKey("delete")
+        .typeText(productdetails.productQuantity, "3")
+        .click(productdetails.addToCart)
+        .expect(productdetails.successMessage.exists).ok()
+        .wait(3000)
+        .click(homepage.CartLink)
+        .click(cartpage.termsLabel)
+        .click(cartpage.checkoutBtn)
+        .expect(getURL).contains("checkout");
+    
+    await checkoutpage.selectCountry('Ireland');
+    await t
+        .takeScreenshot()
+        .typeText(checkoutpage.cityTxt, "Dublin")
+        .typeText(checkoutpage.addressTxt, "123 ABC Test")
+        .typeText(checkoutpage.zipTxt,'123456')
+        .typeText(checkoutpage.phoneTxt,'332434345')
         
+
 });
