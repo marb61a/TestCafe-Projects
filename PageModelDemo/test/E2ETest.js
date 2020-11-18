@@ -58,6 +58,19 @@ test("Place order E2E test", async t => {
         .typeText(checkoutpage.addressTxt, "123 ABC Test")
         .typeText(checkoutpage.zipTxt,'123456')
         .typeText(checkoutpage.phoneTxt,'332434345')
-        
+        .click(checkoutpage.continueBtn)
+        .click(checkoutpage.nextDayOption)
+        .click(checkoutpage.nextShippingBtn)
+        .click(checkoutpage.nextPaymentBtn)
+        .click(checkoutpage.nextConfirmBtn)
+        .click(checkoutpage.confirmOrderBtn)
+        .expect(checkoutpage.orderConfirmationMessage.exists).ok()
+        .click(checkoutpage.viewOrderDetailsLink)
+        .click(homepage.MyAccountLink)
+        .click(myorderpage.orders)
 
+});
+
+test("Change Currency Test", async t => {
+    await homepage.changeCurrency('Euro');
 });
