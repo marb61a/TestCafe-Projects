@@ -21,33 +21,35 @@ test('Assert home page', async t => {
         .expect(homepage.subtitleHeader.exists).ok()        
 });
 
-test("User registration and Login test", async t => {
-    await t
-        .click(homepage.RegisterLink)
-        .expect(getURL()).contains('register')
-        .click(registerpage.GenderOption)
-        .typeText(registerpage.FirstName,data.firstname)
-        .typeText(registerpage.LastName,data.lastname);
-
-        await registerpage.selectDay(data.birthday);
-        await registerpage.selectMonth(data.birthmonth);
-        await registerpage.selectYear(data.birthyear);
-        
+dataSet.forEach(data => {
+    test("User registration and Login test", async t => {
         await t
-            .typeText(registerpage.Email, userEmail)
-            .typeText(registerpage.Password, 'ABC123')
-            .typeText(registerpage.ConfirmPassword, 'ABC123')
-            .click(registerpage.RegisterButton)
-            .expect(registerpage.SuccessfullMessage.exists).ok()
-            .click(homepage.LogoutLink)
-            .click(homepage.LoginLink)
-            .expect(loginpage.accountHeader.exists).ok()
-            .typeText(loginpage.emailInput, userEmail)
-            .typeText(loginpage.passwordInput, 'ABC123')
-            .click(loginpage.submitButton)
-            .click(homepage.MyAccountLink)
-            .expect(customerpage.ordersLink.exists).ok()
-            .click(customerpage.ordersLink)
-            .expect(customerpage.noOrdersLabel.exists).ok()            
-            .takeScreenshot();
+            .click(homepage.RegisterLink)
+            .expect(getURL()).contains('register')
+            .click(registerpage.GenderOption)
+            .typeText(registerpage.FirstName,data.firstname)
+            .typeText(registerpage.LastName,data.lastname);
+    
+            await registerpage.selectDay(data.birthday);
+            await registerpage.selectMonth(data.birthmonth);
+            await registerpage.selectYear(data.birthyear);
+            
+            await t
+                .typeText(registerpage.Email,data.email+randomNumber+'@test.com')
+                .typeText(registerpage.Password,data.password)
+                .typeText(registerpage.ConfirmPassword,data.password)
+                .click(registerpage.RegisterButton)
+                .expect(registerpage.SuccessfullMessage.exists).ok()
+                .click(homepage.LogoutLink)
+                .click(homepage.LoginLink)
+                .expect(loginpage.accountHeader.exists).ok()
+                .typeText(loginpage.emailInput,data.email+randomNumber+'@test.com')
+                .typeText(loginpage.passwordInput,data.password)
+                .click(loginpage.submitButton)
+                .click(homepage.MyAccountLink)
+                .expect(customerpage.ordersLink.exists).ok()
+                .click(customerpage.ordersLink)
+                .expect(customerpage.noOrdersLabel.exists).ok()            
+                .takeScreenshot();
+    });
 });

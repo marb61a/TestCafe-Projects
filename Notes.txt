@@ -353,3 +353,18 @@ Page Model
 TestCafe uses the .testcaferc.json configuration file to store its settings
     - Settings specified when running TestCafe from the command line and the programming interfaces override settings from .testcaferc.json
     - Keep .testcaferc.json in the directory from which test cases are ran
+
+Data-Driven Tests with TestCafe
+    - Data-Driven Tests is a procedure when you repeat the same scenario with different input parameters
+        - The results are then verified with the output values
+    - Test data is always an important part of automated tests
+        - Test data is not just the value or the text in the application, but it's about the whole environment being tested
+        - Usually hardcoded data such as a URL is used 
+        - Hardcoded data though is not configuarble
+    - Test data allows for different scenarios to be tested
+        - For example a form allowing positive and negative reviews
+        - Data can be in different formats -> JSON, XLS, CSV to name a few
+
+Behaviour Driven development
+Introduction to BDD and Cucumber JS/HTML
+    - 
