@@ -4,10 +4,12 @@ import registerpage from '../pages/RegisterPage';
 import loginpage from '../pages/LoginPage';
 import customerpage from '../pages/CustomerPage';
 
+const dataSet = require('../data/data.json');
+
 const URL = 'https://demo.nopcommerce.com/';
 const getURL = ClientFunction(() => window.location.href);
 var randomNumber = Math.floor(Math.random() * 10000);
-var userEmail = 'martin'+randomNumber+'@test.com';
+// var userEmail = 'martin'+randomNumber+'@test.com';
 
 fixture("Registration Fixture")
     .page(URL);
@@ -24,12 +26,12 @@ test("User registration and Login test", async t => {
         .click(homepage.RegisterLink)
         .expect(getURL()).contains('register')
         .click(registerpage.GenderOption)
-        .typeText(registerpage.FirstName, 'Martin')
-        .typeText(registerpage.LastName, 'Byrne');
+        .typeText(registerpage.FirstName,data.firstname)
+        .typeText(registerpage.LastName,data.lastname);
 
-        await registerpage.selectDay('26');
-        await registerpage.selectMonth('April');
-        await registerpage.selectYear('1975');
+        await registerpage.selectDay(data.birthday);
+        await registerpage.selectMonth(data.birthmonth);
+        await registerpage.selectYear(data.birthyear);
         
         await t
             .typeText(registerpage.Email, userEmail)
