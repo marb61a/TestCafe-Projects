@@ -341,6 +341,15 @@ Page Model
             - Changes in locator names will need to be adjusted in multiple file as there is no shared file
             - Code duplication coming from repetition
             - Difficulty in maintaining due to large amounts of unnecessary files 
+    - In this model classes are created for each page in the application
+        - The class then has web page elements, also add the methods which perform actions or operations on those elements
 
-Home Page Class
-    - 
+!!!!!
+    - Chrome may fail tests due to screen not being maximised
+    - Firefox still has the same elements available in a reduced size window
+    - Use the maximizeWindow() command
+    - May need to use this inside await functions on occasion if some elements are not being seen
+
+TestCafe uses the .testcaferc.json configuration file to store its settings
+    - Settings specified when running TestCafe from the command line and the programming interfaces override settings from .testcaferc.json
+    - Keep .testcaferc.json in the directory from which test cases are ran

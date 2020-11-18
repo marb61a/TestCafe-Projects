@@ -13,7 +13,7 @@ class HomePage{
 
     }
 
-    getproductSearch(){
+    get productSearch(){
         return Selector("input[id='small-searchterms']");
     }
 
@@ -26,7 +26,7 @@ class HomePage{
 
     async changeCurrency(currency){
         await t
-            .click(currencyList)
+            .click(this.currencyList)
             .click(Selector('option', { text: currency }));
     }
 
