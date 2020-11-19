@@ -46,21 +46,26 @@ When('I select Year of Birth {string}', async function (year) {
 });
 
 When('I enter Email {string}', async function (email) {
-
+    await testController
+        .typeText(registerpage.RegisterPage.Email(), email+randomNumber+"@test.com");
 });
 
-When('I enter Password {string}', function (string) {
-
+When('I enter Password {string}', async function (password) {
+    await testController
+        .typeText(registerpage.RegisterPage.Password(), password);
 });
 
-When('I enter Confirm Password {string}', function (string) {
-
+When('I enter Confirm Password {string}', async function (password) {
+    await testController
+        .typeText(registerpage.RegisterPage.ConfirmPassword(), password);
 });
 
-When('I click register button', function () {
-
+When('I click register button', async function () {
+    await testController
+        .click(registerpage.RegisterPage.RegistrationButton());
 });
 
-Then('successful message is displayed', function () {
-
+Then('successful message is displayed', async function () {
+    await testController
+        .expect(registerpage.RegisterPage.SuccessfulMessage().exists).ok;
 });
