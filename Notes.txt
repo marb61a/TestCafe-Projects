@@ -367,4 +367,10 @@ Data-Driven Tests with TestCafe
 
 Behaviour Driven development
 Introduction to BDD and Cucumber JS/HTML
-    - 
+    - Behavior-Driven Development is a technique for building software in which the product owner, developers, and the testers collaborate together 
+        - This is so that they can agree about the acceptance criteria
+    - The Behavior-Driven pattern is improving communication and collaboration between teams
+    - Similar to TDD or Test-Driven Development, which starts development by writing test cases
+        - BDD is similar but start by writing the business features file prior to writing the automated test cases
+    - When writing features use plain English sentences and the Gherkin language
+    -
