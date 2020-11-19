@@ -19,5 +19,29 @@ exports.RegisterPage = {
     DateOfBirth : function(){
         return select("select[name='DateOfBirthDay']");
     },
-    
+    MonthOfBirth: function(){
+        return select("select[name='DateOfBirthMonth']");
+    },
+    YearOfBirth: function(){
+        return select("select[name='DateOfBirthYear']");
+    },
+    Email: function(){
+        return select("#Email");
+    },
+    Password: function(){
+        return select('#Password');
+    },
+    ConfirmPassword: function(){
+        return select("#ConfirmPassword");
+    },
+    RegistrationButton: function(){
+        return select("#register-button.button-1.register-next-step-button");
+    },
+    SuccessfulMessage: function(){
+        return select("div.result").withText("Your Registration Completed");
+    },
+    ListOption: function(){
+        return select("option");
+    }
+
 }

@@ -1,10 +1,12 @@
 const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
 
+const registerpage = require('../../pages/RegisterPage');
+
 const URL = 'https://demo.nopcommerce.com/register'; 
 
-Given('I open the registration page', function () {
-
+Given('I open the registration page', async function () {
+    await testController.navigateTo(URL);
 });
 
 When('I select the gender', function () {
