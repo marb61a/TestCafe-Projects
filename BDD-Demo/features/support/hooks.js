@@ -44,5 +44,35 @@ function runTest(iteration, browser){
 setDefaultTimeout(TIMEOUT);
 
 Before(function(){
+    runTest(n, this.setBrowser());
+    createTestFile();
+    n += 2;
+
+    return this.waitForTestController
+        .then(function(testController){
+            return testController.maximizeWindow();
+        })
+});
+
+After(function(){
 
 });
+
+After(async function(testcase){
+
+});
+
+AfterAll(function(){
+
+});
+
+const getIsTestCafeError = function() {
+    return isTestCafeError;
+};
+
+const getAttachScreenshotToReport = function(path) {
+    return attachScreenshotToReport(path);
+};
+
+exports.getIsTestCafeError = getIsTestCafeError;
+exports.getAttachScreenshotToReport = getAttachScreenshotToReport;
