@@ -12,3 +12,19 @@ exports.addErrorToController =  function(){
             return testController.testRun.errs.push(errAdapter);
         });
 };
+
+exports.ifErrorTakeScreenshot = function(resolvedTestController){
+    if(hooks.getIsTestCafeError() === true && testController.testRun.opts.takeScreenshotsOnFails === true){
+        if(process.argv.includes("--format") || process.argv.includes('-f') || process.argv.includes('--format-options')){
+            resolvedTestController.executionChain._state = "fulfilled";
+
+            return resolvedTestController.takeScreenshot()
+                .then(function(path){
+                    return hooks.getAttachScreenshotToReport(path);
+                })
+        } else {
+            return resolvedScreenshot.takeScreenshot();
+        }
+    }
+
+}
