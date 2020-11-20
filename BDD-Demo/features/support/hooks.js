@@ -55,15 +55,37 @@ Before(function(){
 });
 
 After(function(){
-
+    fs.unlinkSync("test.js");
+    testControllerHolder.free();
 });
 
 After(async function(testcase){
+    const world = this;
 
+    if(testcase.result.status === Status.FAILED){
+        isTestCafeError = true;
+        attachScreenshotToReport = world.attachScreenshotToReport;
+        errorHandling.addErrorToController();
+        await errorHandling.ifErrorTakeScreenshot(testController);
+    }
 });
 
 AfterAll(function(){
+    let intervalId = null;
 
+    function waitForTestCafe(){
+        intervalId = setInterval(checkLastResponse, 500);
+    }
+
+    function checkLastResponse(){
+        if(testController.testRun.lastDriverStatusResponse === "test-done-confirmation"){
+            cafeRunner.close();
+            process.exit();
+            clearInterval(intervalId);
+        }
+    }
+
+    waitForTestCafe();
 });
 
 const getIsTestCafeError = function() {
