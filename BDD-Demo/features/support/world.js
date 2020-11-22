@@ -24,16 +24,26 @@ function CustomWorld({ attach, parameters }){
         if (process.argv.includes('--format') || process.argv.includes('-f') || process.argv.includes('--format-options')){
             testController.takeScreenshot()
                 .then(function(screenshotPath){
-
+                    const imgInBase64 = base64Img.base64Sync(screenshotPath);
+                    const imageConvertForCuc = imgInBase64.substring(imgInBase64.indexOf(',') + 1);
+                    return attach(imageConvertForCuc, 'image/png');
                 })
                 .catch(function(error){
                     console.warn('The screenshot was not attached to the report');
                 });
 
         } else {
-
+            return new Promise((resolve) => {
+                resolve(null);
+            });
         }
 
+    },
+
+    this.addScreenshotToReport = function(pathToScreenshot){
+        const imgInBase64 = base64Img.base64Sync(pathToScreenshot);
+        const imageConvertForCuc = imgInBase64.substring(imgInBase64.indexOf(',') + 1);
+        return attach(imageConvertForCuc, 'image/png');
     }
 
 }
