@@ -21,6 +21,16 @@ const testControllerHolder =  {
         if(testControllerHolder.captureResolver){
             testControllerHolder.captureResolver();
         }
+    },
+
+    get: function(){
+        return new Promise(function(resolve){
+            if(testControllerHolder.testController){
+                resolve(testControllerHolder.testController);
+            } else {
+                testControllerHolder.getResolver = resolve;
+            }
+        });
     }
 
 }
