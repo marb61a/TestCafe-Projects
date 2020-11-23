@@ -28,7 +28,7 @@ function runTest(iteration, browser){
             cafeRunner = tc;
             const runner = tc.createRunner();
             return runner
-                .src("./testjs")
+                .src("./test.js")
                 .screenshots("reports/screenshots/", true)
                 .browsers(browser)
                 .run()
@@ -62,7 +62,7 @@ After(function(){
 After(async function(testcase){
     const world = this;
 
-    if(testcase.result.status === Status.FAILED){
+    if(testCase.result.status === Status.FAILED){
         isTestCafeError = true;
         attachScreenshotToReport = world.attachScreenshotToReport;
         errorHandling.addErrorToController();
