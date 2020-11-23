@@ -360,7 +360,7 @@ Data-Driven Tests with TestCafe
     - Test data is always an important part of automated tests
         - Test data is not just the value or the text in the application, but it's about the whole environment being tested
         - Usually hardcoded data such as a URL is used 
-        - Hardcoded data though is not configuarble
+        - Hardcoded data though is not configurable
     - Test data allows for different scenarios to be tested
         - For example a form allowing positive and negative reviews
         - Data can be in different formats -> JSON, XLS, CSV to name a few
@@ -373,4 +373,26 @@ Introduction to BDD and Cucumber JS/HTML
     - Similar to TDD or Test-Driven Development, which starts development by writing test cases
         - BDD is similar but start by writing the business features file prior to writing the automated test cases
     - When writing features use plain English sentences and the Gherkin language
-    -
+    - Step Definition file
+        - To start implementing the steps from the feature file in real code
+    - To run tests using the Cucumber file
+        - ./node_modules/.bin/cucumber-js
+    - In order to run multiple sets of data scenario will have to be changed
+        - This will change to Scenario Outline 
+    - The final item that can be added are Tags
+        - Add a tag to the scenario eg e2e and then run from the cli
+        - ./node_modules/.bin/cucumber-js --tags "@e2e"
+    - Cucumber HTML report
+        - npm i cucumber-html-reporter
+        - This will integrate html reports on testing
+    - Adding entry to package.json to run testcafe cucumber is not working so full command is needed
+        - ./node_modules/.bin/cucumber-js --tags '@e2e' --format json:reports/report.json
+    - To see generated report 
+        - node <file_name> 
+        - In order to see the html version there will need to be a cucumber_report.json file presently
+        - These can be created blank and the cli can be change to point to the correct file like such
+            - ./node_modules/.bin/cucumber-js --tags '@e2e' --format json:test/report/cucumber_report.json
+
+Reports
+TestCafe Reports
+    - 
