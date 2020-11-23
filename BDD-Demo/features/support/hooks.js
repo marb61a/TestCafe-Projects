@@ -51,7 +51,7 @@ Before(function(){
     return this.waitForTestController
         .then(function(testController){
             return testController.maximizeWindow();
-        })
+        });
 });
 
 After(function(){

@@ -2,16 +2,21 @@ Feature: Registration Feature
 
     As a visitor I can create a new account by the registration feature
 
-Scenario: New User Registration E2E Scenario
+@e2e
+Scenario Outline: New User Registration E2E Scenario
 Given I open the registration page
 When I select the gender
-And I enter First Name "Joe"
-And I enter Last Name "Bloggs"
-And I select Date of Birth "1"
-And I select Month of Birth "May"
-And I select Year of Birth "1980"
-And I enter Email "joebloggs@test.com"
-And I enter Password "ABC123"
-And I enter Confirm Password "ABC123"
+And I enter First Name "<firstname>"
+And I enter Last Name "<lastname>"
+And I select Date of Birth "<day>"
+And I select Month of Birth "<month>"
+And I select Year of Birth "<year>"
+And I enter Email "<email>"
+And I enter Password "<password>"
+And I enter Confirm Password "<password>"
 And I click register button
 Then successful message is displayed
+Examples:
+| firstname | lastname | email | password | day | month | year|
+| joe  | bloggs  | joebloggs |ABC123| 1 | April |1980|
+| james | bond | jamesbond | DEF789 | 6 | July | 1970 |
