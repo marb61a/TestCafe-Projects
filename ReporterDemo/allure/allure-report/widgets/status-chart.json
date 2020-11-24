@@ -1,5 +1,5 @@
 [ {
-  "uid" : "ed720d721a88a79e",
+  "uid" : "36ec1fef1f0ec388",
   "name" : "Assert home page",
   "time" : {
     "start" : 1606218978988,
@@ -9,7 +9,7 @@
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "2343d92996dab1a0",
+  "uid" : "ac18dd2b035e16eb",
   "name" : "User registration and Login test",
   "time" : {
     "start" : 1606219083927,

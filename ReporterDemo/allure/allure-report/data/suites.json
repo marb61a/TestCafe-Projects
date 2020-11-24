@@ -1,11 +1,10 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "name" : "suites",
   "children" : [ {
     "name" : "Registration Fixture",
     "children" : [ {
       "name" : "Assert home page",
-      "uid" : "ed720d721a88a79e",
+      "uid" : "36ec1fef1f0ec388",
       "parentUid" : "f48145eb3b8a24fa7fb6d0f2e9839641",
       "status" : "passed",
       "time" : {
@@ -18,7 +17,7 @@
       "parameters" : [ "Firefox 83.0 / Windows 10" ]
     }, {
       "name" : "User registration and Login test",
-      "uid" : "2343d92996dab1a0",
+      "uid" : "ac18dd2b035e16eb",
       "parentUid" : "f48145eb3b8a24fa7fb6d0f2e9839641",
       "status" : "passed",
       "time" : {
@@ -31,5 +30,6 @@
       "parameters" : [ "Firefox 83.0 / Windows 10" ]
     } ],
     "uid" : "f48145eb3b8a24fa7fb6d0f2e9839641"
-  } ]
+  } ],
+  "name" : "suites"
 }

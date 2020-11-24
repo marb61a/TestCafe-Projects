@@ -1,12 +1,12 @@
 {
-  "uid" : "ed720d721a88a79e",
-  "name" : "Assert home page",
-  "fullName" : "Registration Fixture.Assert home page",
-  "historyId" : "b57af572f7884d2e94928a6f671c4e86",
+  "uid" : "ac18dd2b035e16eb",
+  "name" : "User registration and Login test",
+  "fullName" : "Registration Fixture.User registration and Login test",
+  "historyId" : "28aaea5909995e9f51ed4e2649dfa728",
   "time" : {
-    "start" : 1606218978988,
-    "stop" : 1606218997349,
-    "duration" : 18361
+    "start" : 1606219083927,
+    "stop" : 1606219188327,
+    "duration" : 104400
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -28,7 +28,7 @@
     "value" : "Registration Fixture"
   }, {
     "name" : "testMethod",
-    "value" : "Assert home page"
+    "value" : "User registration and Login test"
   }, {
     "name" : "package",
     "value" : "Registration Fixture"
@@ -49,6 +49,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "ed720d721a88a79e.json",
+  "source" : "ac18dd2b035e16eb.json",
   "parameterValues" : [ "Firefox 83.0 / Windows 10" ]
 }

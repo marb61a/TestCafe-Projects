@@ -1,22 +1,8 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
-  "name" : "timeline",
   "children" : [ {
-    "name" : "User registration and Login test",
-    "uid" : "2343d92996dab1a0",
-    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
-    "status" : "passed",
-    "time" : {
-      "start" : 1606219083927,
-      "stop" : 1606219188327,
-      "duration" : 104400
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ "Firefox 83.0 / Windows 10" ]
-  }, {
     "name" : "Assert home page",
-    "uid" : "ed720d721a88a79e",
+    "uid" : "36ec1fef1f0ec388",
     "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
     "status" : "passed",
     "time" : {
@@ -27,5 +13,19 @@
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ "Firefox 83.0 / Windows 10" ]
-  } ]
+  }, {
+    "name" : "User registration and Login test",
+    "uid" : "ac18dd2b035e16eb",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1606219083927,
+      "stop" : 1606219188327,
+      "duration" : 104400
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Firefox 83.0 / Windows 10" ]
+  } ],
+  "name" : "timeline"
 }
