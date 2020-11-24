@@ -395,4 +395,26 @@ Introduction to BDD and Cucumber JS/HTML
 
 Reports
 TestCafe Reports
-    - 
+    - Reporters are plugins used to output test run reports in a certain format
+    - Reporter plugins are npm packages
+    - TestCafe ships with multiple Reporters
+        - spec (default), xUnit, JSON, List, HTML, Allure Report
+    - To install the TestCafe HTML reporter
+        - npm install testcafe-reporter-html 
+    - After installation the reporter can be ran from the cli
+        - npx testcafe firefox .\tests\RegistrationSteps.js --reporter html
+        - This will send HTML to the console by default
+    - In order to generate a HTML file there is an additional command needed
+        - npx testcafe firefox .\tests\RegistrationSteps.js --reporter html:report.html
+    - Open command does not exist on Windows platform
+        - start can be used instead
+        - To start the report file use start report.html
+        - This will open the file in the default browser
+
+Allure Reports
+    - To install the Allure reports package
+        - npm install testcafe-reporter-allure
+    - To run the Allure reporter
+        - npx testcafe firefox .\tests\RegistrationSteps.js --reporter allure
+    - After running there will be an Allure folder generated holding the results
+    
