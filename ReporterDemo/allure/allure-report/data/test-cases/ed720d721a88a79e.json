@@ -1,0 +1,54 @@
+{
+  "uid" : "ed720d721a88a79e",
+  "name" : "Assert home page",
+  "fullName" : "Registration Fixture.Assert home page",
+  "historyId" : "b57af572f7884d2e94928a6f671c4e86",
+  "time" : {
+    "start" : 1606218978988,
+    "stop" : 1606218997349,
+    "duration" : 18361
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "statusMessage" : "This test has been passed.",
+  "statusTrace" : "no error",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "undefined"
+  }, {
+    "name" : "suite",
+    "value" : "Registration Fixture"
+  }, {
+    "name" : "testClass",
+    "value" : "Registration Fixture"
+  }, {
+    "name" : "testMethod",
+    "value" : "Assert home page"
+  }, {
+    "name" : "package",
+    "value" : "Registration Fixture"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "User Agent",
+    "value" : "Firefox 83.0 / Windows 10"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ed720d721a88a79e.json",
+  "parameterValues" : [ "Firefox 83.0 / Windows 10" ]
+}
