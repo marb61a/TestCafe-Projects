@@ -3,6 +3,9 @@ import homepage from '../pages/HomePage';
 import registerpage from '../pages/RegisterPage';
 import loginpage from '../pages/LoginPage';
 import customerpage from '../pages/CustomerPage';
+import Eyes from '@applitools/eyes-testcafe';
+
+const eyes = new Eyes();
 
 const dataSet = require('../data/data.json');
 
@@ -12,7 +15,12 @@ var randomNumber = Math.floor(Math.random() * 10000);
 // var userEmail = 'martin'+randomNumber+'@test.com';
 
 fixture("Registration Fixture")
-    .page(URL);
+    .page(URL)
+    .afterEach(async () => eyes.close())
+    .after(async () => {
+        let allTestResults = await eyes.waitForResults(true)
+        console.log(allTestResults);
+    });
 
 test('Assert home page', async t => {
     await t
@@ -23,6 +31,13 @@ test('Assert home page', async t => {
 
 dataSet.forEach(data => {
     test("User registration and Login test", async t => {
+        await eyes.open({
+            t,
+            appName: ApplitoolsDemo,
+            testName: 'User Registration'
+        });
+        await eyes.checkWindow('Home Page');
+
         await t
             .click(homepage.RegisterLink)
             .expect(getURL()).contains('register')
