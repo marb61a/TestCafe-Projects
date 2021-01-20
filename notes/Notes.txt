@@ -462,4 +462,19 @@ Create a Github Account
 YAML Files for GitHub Actions
     - https://yaml.org/
     - YAML is a human friendly data serialization standard for all programming languages
-    
+    - To start to setup actions select the actions tab inside the GitHub repo 
+    - Most of the time GitHub will auto-detect the file type and will suggest workflows for them
+    - There are some of the steps that can be skipped
+    - Comment lines are part of the Yaml file but again are not needed
+    - The Github marketplace is a place to get plugins to extend Github
+        - https://github.com/marketplace
+    - There is a plugin needed to run TestCafe tests
+        - There are a couple available actions available 
+        - Install TestCafe and Run Tests are the actions needed
+    - The checkout action fetches the repository
+    - The uses action in the yaml file installs the needed package
+    - After proposing a new to start a commit a PR or pull request can be made
+
+Run with multiple OS and NodeJS versions
+    - This will again make use of the above processes
+    - 
