@@ -449,4 +449,17 @@ Github Actions
     - Combine and configure actions for the services you use, built, and maintained by the community
 
 What is the GitHub Actions workflow?
-    - 
+    - Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub
+    - Workflows run in Linux, macOS, and Windows, and containers on GitHub-hosted machines
+    - You can create a workflow file configured to run a specific event - like every pull request, scheduled, or manually
+
+Create a Github Account
+    - https://github.com/
+    - A free github acccount will be needed to be able to use Github actions
+    - There are complete set of notes on github functionality available at the following address
+        - https://github.com/marb61a/Course-Notes/tree/master/Testing/Tools/Git/Step%20By%20Step
+
+YAML Files for GitHub Actions
+    - https://yaml.org/
+    - YAML is a human friendly data serialization standard for all programming languages
+    
