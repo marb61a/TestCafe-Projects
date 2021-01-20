@@ -499,6 +499,26 @@ TestCafe Docker image
         - VMs run applications inside the guest operating systems, which run on virtual hard powered by server host OS
             - VMs are great at providing full process isolation for applications
         - There are very few ways a problem in the host operating system can affect a software running as a guest operating system
-            - This is true vice versa
-        -
+            - This is true vice versa but VM isolation can be expensive resource wise
+        - Containers take a different approach by leveraging the low-level mechanics of the host operating system
+            - Containers provide most of the isolation of virtual machines at a fraction of the computing power
+        - Why use containers
+            - Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they run
+            - This decoupling allows container-based applications to be deployed easily and consistently regardless of the target environment
+            - This gives the developers the ability to create predictable environments that are isolated from the rest of the application and they can be run anywhere
+    - Installing Docker
+        - There will be different ways of installing Docker on each platform
+        - https://docs.docker.com/docker-for-windows/install/
+        - To check if installation is successful use the following command
+            - docker info
+            - This should show all the details about the Docker desktop version - the containers, images, and all the info that's related to Docker
+    - Download TestCafe Docker Image
+        - To download the TestCafe Image with Docker use the following command
+            - docker pull testcafe/testcafe
+            - This will download the latest version from TestCafe Docker Image 
+        - The latest Docker image contains all the dependencies you need to run TestCafe
+            - The image includes the Test Cafe executable for running tests and this also includes recent versions of Firefox and chromium-browser to run your tests
+            - Tests can be ran in headless mode or normal mode since the image is set up with the XVFB display server
+            - This display server allows you to use functionality like taking a screenshot during your test runs
+        - When you run the test using Docker image, you want to see the browser open up and run your test, even in Normal mode
     -
