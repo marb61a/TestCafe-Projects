@@ -477,4 +477,28 @@ YAML Files for GitHub Actions
 
 Run with multiple OS and NodeJS versions
     - This will again make use of the above processes
-    - 
+    - The example will also use something called the strategy and matrix
+    - A matrix is a set of keys and values that allows you to spawn several jobs starting from a single job definition
+    - This is done inside the strategy sections 
+    - Depending on the project needs it may be necessary to make a branch for the yaml file
+    - In the build definition the strategy section can be add like below
+    - strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [8, 10, 12]
+    - This will use both multiple versions of Node and multiple OS versions
+
+TestCafe Docker image
+    - Docker is a tool that allows developers or system admins to easily deploy their applications in a sandbox
+        - https://www.docker.com/
+        - These are called containers and will run on a host operating system
+    - Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development
+        - Unlike virtual machines, containers don't have high overhead and hence enable more efficient usage of the underlying system and resources
+    - What are containers?
+        - Previously virtual machines wered used to run applications
+        - VMs run applications inside the guest operating systems, which run on virtual hard powered by server host OS
+            - VMs are great at providing full process isolation for applications
+        - There are very few ways a problem in the host operating system can affect a software running as a guest operating system
+            - This is true vice versa
+        -
+    -
