@@ -544,5 +544,27 @@ Run Tests on a remote device
         - The steps for running tests on a mobile device are
             - Open the console and type a command to run the tests with remote as a browser alias
             - Add --qr-code flag to generate a QR code for the mobile device
-        -
+        - An example command is as follows
+            - testcafe remote tests/test.js --qr-code
+            - testcafe remote means that it will run on the remote device
+            - The test needed to be ran is passed and the QR is then output to the console
+        - Scan the QR code with a mobile device that has network access to the TestCafe machine or TestCafe server, and open the link
+            - TestCafe will then start tests in the mobile browser
+        - Then like the example above run the code on the remote browser
+        - After clicking enter the QR code will need to be minimised so that it can be scanned with mobile
+        - San the code and there shoul be an option open the website
+        - Once opened we'll be connected with TestCafe, because we are on the same network
+        - After the webpage is opened and the test has passed the results are sent to the TestCafe cli
+        - At this point the mobile is then disconnected
+ 
+ Reporter Portal
+    - What is ReportPortal?
+        - ReportPortal is a service that provides increased capabilities to speed up result analysis and reporting through the use of built-in analytics features
+        - It can be a great addition to continuous integration and to the continuous testing process
+        - Some of the main features of ReportPortal are
+            - Platform integration, ReportPortal integraes very quickly and easily with Jenkins, Jira, BDD process, majority of functional and unit testing frameworks
+                - Real-time integration provides businesses the ability to manage and to track execution statuses directly from the ReportPortal
+                - Test case execution results are stored following the same structure used in reporting suites and test plans 
+            - Collabortive analysis as ReportPortal allows for analysing test automation results
+        - 
     -
