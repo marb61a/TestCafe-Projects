@@ -587,4 +587,24 @@ Run Tests on a remote device
             - --force-recreated is for when ReportPortal has been installed previously, it needed to be recreated from the beginning
         - After this the open the web browser the IP address of the deployed environment is needed as well as port 8080
             - If local then it is localhos:8080
+    - Install and Run ReportPortal with Docker
+        - https://reportportal.io/
+        - https://reportportal.io/installation
+        - Install using Docker
+        - Firstly make and change into a directory
+        - Then use the following command to download the docker compose file
+            - curl [https://raw.githubusercontent.com/reportportal/reportportal/master/docker]
+                (https://raw.githubusercontent.com/reportportal/reportportal/master/docker) -compose.yml -o docker-compose.yml
+        - Return to the URL then start the application use the following command
+            - docker-compose -p reportportal up -d --force-recreate
+        - There are default password available when installation is complete
+    - Configure ReportPortal with TestCafe
+        - The npm module for ReportPortal TestCafe needs to be installed 
+            - npm install testcafe-reporter-reportportal
+        - When running from the command line a reporter can be specified using --reporter
+            - Example -> testcafe chrome 'path/to/test/file.js' --reporter reportportal
+        - A .env file can also be created by adding the following required variables for the ReportPortal
+        - This .env file needs to be at the root of the project
+            - An example file is in the same directory as these notes 
+        -
     -
