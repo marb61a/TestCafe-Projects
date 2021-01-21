@@ -521,4 +521,28 @@ TestCafe Docker image
             - Tests can be ran in headless mode or normal mode since the image is set up with the XVFB display server
             - This display server allows you to use functionality like taking a screenshot during your test runs
         - When you run the test using Docker image, you want to see the browser open up and run your test, even in Normal mode
+        - Running a graphical interface using Docker on your desktop such as a web browser, requires additional configuration to allow Docker to use your desktop display server
+            - This may be a complicated solution and varies by system
+    - Running your tests inside TestCafe's Docker Container
+        - To run the test to inside the Docker container use the following command
+            - docker run -v ${TEST_FOLDER}:/tests -it testcafe/testcafe ${TESTCAFE_ARGS}
+            - ${TEST_FOLDER} is the local folder for our tests
+            - /tests is the folder that we need to copy our tests inside the Docker container
+            - Then there is a need to name the version of the container with TestCafe
+            - After that the TestCafe arguments can be passed such as the browser name, the test file etc
+        - Just mention that we can run on Chromium or Firefox because the Docker container just includes these two browsers 
+            - It does not include the Chrome browser
+
+Run Tests on a remote device
+    -  Run Tests on a Mobile Device (Remote)
+        - To run tests on a remote mobile device, the device must have network access to the TestCafe server
+        - The first thing needed is to create a remote browser connection
+        - After that, TestCafe generates a URL to open in the browser that needs to be tested
+        - This URL is exposed through the API or displayed in the console
+        - To access this URL from the desired browser, it then connects to the TestCafe server and starts the test
+        - When running tests in the browser desired the is no screenshot taking or resizing the browser window
+        - The steps for running tests on a mobile device are
+            - Open the console and type a command to run the tests with remote as a browser alias
+            - Add --qr-code flag to generate a QR code for the mobile device
+        -
     -
